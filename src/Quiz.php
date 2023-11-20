@@ -28,12 +28,12 @@ class Quiz {
         return ($this->questions);
     }
 
-    public function grade():int
+    public function grade(): float
     {
-        $correct=count(array_filter($this->questions, function($question){
-            return $question->isCorrect();
-        }));
+        $correct = array_filter($this->questions, fn($question) => $question->isCorrect());
+        
+        $totalQuestions = count($this->questions);
 
-        return ($correct/count($this->questions))*100;
+        return (count($correct) / $totalQuestions) * 100;
     }
 }
