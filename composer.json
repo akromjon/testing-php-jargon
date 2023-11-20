@@ -1,0 +1,23 @@
+{
+    "name": "akromjon/testing-php-jargon",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "akromjon",
+            "email": "numonov.akromjon1998@gmail.com"
+        }
+    ], 
+    "autoload": {
+        "psr-4": {
+            "Akromjon\\TestingPhpJargon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },       
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
+}
